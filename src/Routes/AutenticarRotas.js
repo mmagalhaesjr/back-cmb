@@ -8,4 +8,5 @@ const autenticarRotas = Router();
 
 autenticarRotas.post('/login', validarDados(LoginSchema), AutenticarController.login);
 
+
 export default autenticarRotas;

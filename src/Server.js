@@ -2,10 +2,12 @@ import express from "express";
 import cors from "cors";
 
 import autenticarRotas from "./Routes/AutenticarRotas.js";
-
+import dadosRotas from "./Routes/DadosRotas.js";
 
 
 import dotenv from "dotenv";
+
+
 dotenv.config()
 
 
@@ -14,6 +16,7 @@ server.use(express.json())
 
 
 server.use(autenticarRotas)
+server.use(dadosRotas)
 
 
 
