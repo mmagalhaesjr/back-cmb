@@ -23,10 +23,20 @@ async function enviarDados(dadosUsuario) {
     );
 }
 
+async function selecionarDados(id, tokenBd) {
+    return await db.query(`SELECT * FROM dados WHERE id = ? `, [id]);
+}
+
+async function deletarDados(id) {
+    await db.query(`DELETE FROM dados WHERE id = ?`, [id]);
+}
+
 
 export default {
     verificaToken,
     encontrarDados,
-    enviarDados
+    enviarDados,
+    selecionarDados,
+    deletarDados
     
 }
